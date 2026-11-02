@@ -3,8 +3,43 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --background: 222 47% 7%;        /* #0b0f19 */
+    --foreground: 210 40% 98%;       /* #f8fafc */
+    
+    --card: 222 47% 11%;             /* #0f172a */
+    --card-foreground: 210 40% 98%;
+    
+    --primary: 347 77% 50%;          /* #e11d48 Crimson / Race Red */
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 217 33% 17%;        /* #1e293b Slate 800 */
+    --secondary-foreground: 210 40% 98%;
+    
+    --muted: 217 33% 15%;
+    --muted-foreground: 215 20% 65%; /* #94a3b8 Slate 400 */
+    
+    --accent: 38 92% 50%;            /* #f59e0b Amber / Gold */
+    --accent-foreground: 0 0% 100%;
+    
+    --border: 217 33% 18%;           /* #1e293b */
+    --input: 217 33% 18%;
+    --ring: 347 77% 50%;
+    
+    --radius: 0.75rem;
+  }
+
+  [data-theme="cyan"] {
+    --primary: 189 94% 43%;          /* #06b6d4 Electric Cyan */
+    --ring: 189 94% 43%;
+  }
+
+  [data-theme="gold"] {
+    --primary: 38 92% 50%;           /* #f59e0b Prestige Gold */
+    --ring: 38 92% 50%;
+  }
+
   body {
-    @apply antialiased;
+    @apply bg-background text-foreground antialiased;
   }
 }
-
